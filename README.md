@@ -1,0 +1,1 @@
+# nodejs_ejs_dynamodb_s3_ec2

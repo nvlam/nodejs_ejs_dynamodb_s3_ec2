@@ -1,0 +1,8 @@
+<%- include("layout", { body: `
+  <form method="POST" action="/products/${product.id}?_method=PUT">
+    <p>Name: <input name="name" value="${product.name}" required /></p>
+    <p>Price: <input name="price" type="number" step="0.01" value="${product.price}" required /></p>
+    <p>Image URL: <input name="imageUrl" value="${product.imageUrl || ""}" /></p>
+    <button type="submit">Update</button>
+  </form>
+` }) %>

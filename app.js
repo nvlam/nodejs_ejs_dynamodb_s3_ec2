@@ -2,6 +2,22 @@ require("dotenv").config();
 const express = require("express");
 const methodOverride = require("method-override");
 
+// begin edit
+
+//const methodOverride = require("method-override");
+//const express = require("express");
+
+//const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// VERY IMPORTANT: method override
+app.use(methodOverride("_method"));
+
+
+//end edit
+
 const productsRoutes = require("./routes/products");
 
 const app = express();
